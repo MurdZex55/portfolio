@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Majd Zeid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hanunoo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="theactualbody">
+        <!-- Header -->
+        <header>
+            <nav>
+                <h1 class="myname">Majd Zeid</h1>
+                <ul id="List">
+                    <li><a  href="#skills">Skills</a></li>
+                    <li><a  href="#education">Education</a></li>
+                    <li><a  href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Introduction Section -->
+        <section id="intro">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Hi, It's <span class="highlight glitch-text" data-text="Majd">Majd</span></h2>
+                    <p>I'm a Web Developer</p>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="intro-image">
+                            <img src="1690374268570.jpeg" alt="Majd">
+                        </div>
+                        <div class="btn-group">
+                            <a href="#contact" class="btn">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-cards">
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <p>Creating visually stunning user interfaces.</p>
+                </div>
+                <div class="skill">
+                    <h3>Customer Service</h3>
+                    <p>Improving user experience through research.</p>
+                </div>
+                <div class="skill">
+                    <h3>Graphic Design</h3>
+                    <p>Developing interactive prototypes.</p>
+                </div>
+                <div class="skill">
+                    <h3>Photo Editing</h3>
+                    <p>Building cohesive brand identities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-event left">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>University</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="timeline-event right">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Internship</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="timeline-event left">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Job 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
