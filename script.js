@@ -35,3 +35,20 @@ document.querySelectorAll('.glitch-text').forEach(link => {
         link.innerText = realText; // Show the real text immediately when the mouse leaves
     });
 });
+const roles = ["Web Developer", "Photo Editor", "UI Designer", "Graphic Designer", "Content Creator"];
+let index = 0;
+const roleElement = document.getElementById("role");
+
+function changeRole() {
+  roleElement.style.opacity = 0; // Fade out effect
+  setTimeout(() => {
+    roleElement.textContent = roles[index]; // Change text
+    roleElement.style.opacity = 1; // Fade in effect
+    index = (index + 1) % roles.length; // Cycle through roles
+  }, 800); // 500ms to match the fade-out effect
+}
+
+setInterval(changeRole, 3000); // Change every 2 seconds
+
+
+roleElement.textContent = "?   ? ? ? ?";
