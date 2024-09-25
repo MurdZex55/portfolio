@@ -1,3 +1,10 @@
+/* Color Variables */
+:root {
+  --primary-color: #95bf00;
+  --secondary-color: #2674cd;
+  --accent-color: #1b579b;
+}
+
 /* General Styles */
 * {
   margin: 0;
@@ -11,19 +18,16 @@
 }
 
 body {
-    background-color: #000;
+  background-color: #000;
   font-family: "Noto Sans Hanunoo", sans-serif;
   color: #fff;
   line-height: 1.6;
   text-align: center;
 }
-#myname{
-  color: #00ffff;
-}
-
+h1,
 h2,
 h3 {
-  color: #ebeceb;
+  color: var(--primary-color);
 }
 
 header {
@@ -46,48 +50,50 @@ nav ul {
   flex-wrap: wrap;
 }
 nav ul li a {
-  color: #c9d0d8;
+  color: var(--primary-color);
   border-radius: 30%;
   padding: 0;
   text-decoration: none;
-  transition: all 0.3s ease-in-out; 
-  display: inline-block; 
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
   font-weight: bolder;
   transform-origin: center;
 }
 nav ul li a:hover {
-    color: #2674cd;
-    background-color:transparent;
-    transform: scale(1.1);
-    margin-bottom: -10px;
+  color: var(--secondary-color);
+  background-color: transparent;
+  transform: scale(1.1);
+  margin-bottom: -10px;
 }
-  
+
+/* Glitch Effect */
 .glitch-text {
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s ease; 
-  }
-  
-  .glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: transparent;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .glitch-text span {
-    display: inline-block;
-    transition: all 0.4s ease-in-out;
-    opacity: 1;
-  }
-  
-  .hidden {
-    opacity: 0;
-    filter: blur(2px);
-  }
-  
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.glitch-text span {
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+}
+
+/* Introduction Section */
 #intro {
   display: flex;
   justify-content: center;
@@ -111,11 +117,13 @@ nav ul li a:hover {
   text-align: left;
   padding-right: 20px;
 }
+
 .changing-text {
-  color: #2674cd;
+  color: var(--primary-color);
   transition: opacity 0.5s ease-in-out;
   display: inline-block;
 }
+
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -125,6 +133,7 @@ p {
   font-size: 1.5rem;
 }
 
+/* Card Styles */
 .card-container {
   flex: 1;
   display: flex;
@@ -147,25 +156,24 @@ p {
   animation: heartbeat 3.5s ease-in-out 0.2s infinite forwards;
 }
 
+.prechangetext {
+  color: var(--accent-color);
+  font-weight: bold;
+}
 
 .intro-image img {
-  width: 50%;
-  height: auto;
   border-radius: 50%;
   margin: 30px;
-  border: 5px solid #162d59 ;
-  margin-bottom: 5px;
-  padding: 0px ;
+  border: 5px solid var(--accent-color);
   width: 18rem;
   animation: zoomIn 1.5s ease;
   transition: all 0.8s ease-in-out;
 }
-.intro-image img:hover{
-    -webkit-box-shadow: 0px 0px 149px -6px rgba(255, 255, 255, 0.15);
-    -moz-box-shadow: 0px 0px 149px -6px rgba(255, 255, 255, 0.15);
-    box-shadow: 0px 0px 149px -6px rgba(255, 255, 255, 0.15);
 
+.intro-image img:hover {
+  box-shadow: 0px 0px 149px -6px rgba(255, 255, 255, 0.15);
 }
+
 .btn-group {
   display: flex;
   flex-direction: column;
@@ -173,39 +181,32 @@ p {
 }
 
 .highlight {
-    background: linear-gradient(257deg, #d3d4d6, #1b579b);
-    background-size: 200% 200%; /* Ensure the background is large enough to move smoothly */
-    background-position: 0% 50%; /* Initial position */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: colorShift 3.5s infinite ease-in-out;
+  background: linear-gradient(257deg, #d3d4d6, var(--accent-color));
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: colorShift 3.5s infinite ease-in-out;
 }
 
 .btn {
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    background: #162d59;
-    border-radius: 25px;
-    font: "Noto Sans Hanunoo", sans-serif;
-    padding: 0.8rem 1.5rem;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease, transform 0.3s ease;
-    margin: 0.5rem;
-   
+  color: white;
+  background: var(--secondary-color);
+  border-radius: 25px;
+  padding: 0.8rem 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.3s ease;
+  margin: 0.5rem;
 }
 
 .btn:hover {
-  background-color: #2674cd;
-  transform: scale(1.1);  
-  
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
 }
-  
-            
-/* Services Section */
+
+/* Skills Section */
 #skills {
   padding: 3rem 1rem;
   background: #000000;
@@ -219,37 +220,16 @@ p {
 }
 
 .skill {
-  background-color: #162d59;
+  background-color: var(--secondary-color);
   padding: 1.5rem;
   border-radius: 10px;
-
   transition: all 0.3s ease, background-color 0.3s ease;
 }
 
 .skill:hover {
-  background-color: #2674cd;
-  width: 100rem;
+  background-color: var(--secondary-color);
 }
 
-/* Testimonials Section 
-#testimonials {
-  padding: 2rem;
-  background: #1a1a1a;
-}
-
-.testimonial {
-  background-color: #000000;
-  padding: 1.5rem;
-  margin: 1rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.testimonial:hover {
-  background-color: #00ffff;
-  transform: scale(1.05);
-}
-*/
 /* Education Section */
 #education {
   padding: 2rem;
@@ -263,6 +243,11 @@ p {
 .education-timeline li {
   padding: 1rem;
   border-left: 3px solid #000000;
+  color: white;
+}
+
+.education-timeline li:hover {
+  color: var(--primary-color);
 }
 
 /* Contact Section */
@@ -289,23 +274,18 @@ textarea {
 
 button {
   padding: 1rem 2rem;
-  background-color: #162d59;
+  background-color: var(--secondary-color);
   border: none;
   cursor: pointer;
-  color: #000;
+  color: white;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #601616;
-}
-/* Timeline Section */
-#education {
-  padding: 3rem 0;
-  background-color: #000000;
-  text-align: center;
+  background-color: var(--accent-color);
 }
 
+/* Timeline Section */
 .timeline {
   position: relative;
   max-width: 1000px;
@@ -332,7 +312,7 @@ button:hover {
 .timeline-event .timeline-date {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2674cd;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -343,14 +323,14 @@ button:hover {
   margin: 1.3rem;
   border-radius: 10px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px #162d59;
+  box-shadow: 0 0 15px var(--secondary-color);
   transition: all 0.3s ease-in-out;
 }
 
 .timeline-event:hover .timeline-content {
-  background-color: #2674cd;
+  background-color: var(--accent-color);
   color: #000;
-  box-shadow: 0 0 25px #2674cd;
+  box-shadow: 0 0 25px var(--accent-color);
   transform: translate(1.11);
 }
 
@@ -394,7 +374,7 @@ button:hover {
   transform: translateY(-50%);
   left: 50%;
   margin-left: -10px;
-  box-shadow: 0 0 15px #2674cd;
+  box-shadow: 0 0 15px var(--accent-color);
 }
 
 .timeline-event.left:after {
@@ -406,15 +386,6 @@ button:hover {
   left: -10px;
 }
 
-/* Ensure content is centered vertically */
-.timeline-content {
-  text-align: left;
-}
-
-.timeline-content h3 {
-  color: #00ffff;
-  margin-bottom: 1rem;
-}
 /* Keyframes for Animations */
 @keyframes fadeIn {
   0% {

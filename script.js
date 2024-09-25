@@ -45,10 +45,10 @@ function changeRole() {
     roleElement.textContent = roles[index]; // Change text
     roleElement.style.opacity = 1; // Fade in effect
     index = (index + 1) % roles.length; // Cycle through roles
-  }, 800); // 500ms to match the fade-out effect
+  }, 500); // 500ms to match the fade-out effect
 }
 
-setInterval(changeRole, 3000); // Change every 2 seconds
+setInterval(changeRole, 3500); // Change every 2 seconds
 
 
-roleElement.textContent = "?   ? ? ? ?";
+roleElement.textContent = "? ? ? ? ?";
